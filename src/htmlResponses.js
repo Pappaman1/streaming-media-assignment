@@ -3,6 +3,7 @@ const fs = require('fs');
 const index = fs.readFileSync(`${__dirname}/../client/client.html`);
 const bling = fs.readFileSync(`${__dirname}/../client/client2.html`);
 const bird = fs.readFileSync(`${__dirname}/../client/client3.html`);
+
 const getIndex = (request, response) => {
   response.writeHead(200, { 'Content-Type': 'text/html' });
   response.write(index);
@@ -22,5 +23,5 @@ const getBird = (request, response) => {
 };
 
 module.exports.getIndex = getIndex;
-module.exports.getIndex = getBling;
-module.exports.getIndex = getBird;
+module.exports.getBling = getBling;
+module.exports.getBird = getBird;
